@@ -1,9 +1,10 @@
 body {
 	/*font-family:Roboto;*/
-	height       : 4000px;
+	/*height       : 4000px;*/
 	font-family  : Roboto;
 	overflow-x:hidden;                
 }
+
 
 li a {
 	/*font-family: Roboto ;*/
@@ -177,7 +178,6 @@ li a {
 .inst-block {
 	margin: 0;
 }
-
 /*.carousel-caption{
 	position  : absolute;
 	color     :black;

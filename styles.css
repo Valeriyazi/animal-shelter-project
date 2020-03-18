@@ -284,17 +284,18 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 227px;
+  height: 150px;
   background: #644D7B;
   text-align: center;
 }
 
 footer img {
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 footer span {
   color: #fff;
-  padding-top: 5%;
+  padding-top: 3.5%;
 }
 /*# sourceMappingURL=styles.css.map */

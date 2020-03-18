@@ -1,3 +1,7 @@
+<?php
+if(session_status()!=PHP_SESSION_ACTIVE) session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -9,51 +13,16 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="Bootstrap/css/main.css">
-  <link rel="stylesheet" href="Bootstrap/fonts/roboto/roboto.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="fonts/roboto/roboto.css" />
   <link rel="stylesheet" href="styles.css">
   <title>Animal Shelter</title>
 </head>
 
 <body>
-
-  <!-- МЕНЮ -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="logo">
-      <a href="# " class="navbar-brand">
-        <img src="Bootstrap/img/logo1.png" width="70" height="45" alt="logo">
-      </a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto ">
-        <li class="nav-item">
-          <a href="#" class="nav-link menu">Кто мы</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link menu">Что мы делаем</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link menu">Как помочь</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link menu">Питомцы</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link  menu">Вход/Регистрация</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input type="text" class="form-control mr-sm-2" placeholder="поиск..." aria-label="Search">
-        <!-- <button class="btn btn-outline-success my-2 my-sm-0">search</button> -->
-      </form>
-      <button class=" btn mybtn">Пожертвовать</button>
-    </div>
-  </nav>
+<?php
+include 'menu.php';
+?>
 
   <!-- СЛАЙДЕР -->
   <section class="container-fluid p-0">
@@ -72,16 +41,16 @@
 
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="Bootstrap/img/1-1.jpg" alt="" class="d-block w-100">
+          <img src="img/1-1.jpg" alt="" class="d-block w-100">
           <!-- <div class="carousel-caption">
           <h5>Программирование</h5>
         </div> -->
         </div>
         <div class="carousel-item">
-          <img src="Bootstrap/img/2-2.jpg" alt="" class="d-block w-100">
+          <img src="img/2-2.jpg" alt="" class="d-block w-100">
         </div>
         <div class="carousel-item">
-          <img src="Bootstrap/img/3-3.jpg" alt="" class="d-block w-100">
+          <img src="img/3-3.jpg" alt="" class="d-block w-100">
         </div>
       </div>
       <a href="#carouselExampleIndicators" class="carousel-control-prev" role="button" data-slide="prev">
@@ -121,7 +90,7 @@
           нужным. Иногда для спасения достаточно совсем немного, стоит увидеть чьи-то обречённые глаза и сделать порой
           совсем чуть-чуть, чтобы вернуть им веру в людей.</p>
       </div>
-      <div class="info--image"><img src="Bootstrap/img/4.png" alt="" class="w-100"> </div>
+      <div class="info--image"><img src="img/4.png" alt="" class="w-100"> </div>
     </div>
   </section>
 
@@ -135,7 +104,7 @@
     </div>
     <div class="pics--isAbout">
       <div class="col ">
-        <img src="Bootstrap/img/5.png" alt="" class="effect">
+        <img src="img/5.png" alt="" class="effect">
 
         <div class="explanation">
           <div class="explanationt--top">
@@ -152,7 +121,7 @@
       </div>
 
       <div class="col">
-        <img src="Bootstrap/img/6.png" alt="" class="effect">
+        <img src="img/6.png" alt="" class="effect">
         <div class="explanation">
           <div class="explanationt--top">
             <span>Защищаем</span>
@@ -167,7 +136,7 @@
       </div>
 
       <div class="col">
-        <img src="Bootstrap/img/7.png" alt="" class="effect">
+        <img src="img/7.png" alt="" class="effect">
         <div class="explanation">
           <div class="explanationt--top">
             <span>Защищаем</span>
@@ -263,7 +232,7 @@
     <div class="col-sm-7 left--side"">
       <div class=" left--take--pet">
       <div class="left--pet">
-        <a href="#"><img src="Bootstrap/img/8.png" alt="" class="w-60"></a>
+        <a href="#"><img src="img/8.png" alt="" class="w-60"></a>
 
         <figure>
           <div id="triangle"></div>
@@ -275,7 +244,7 @@
       </div>
 
       <div class="right--pet">
-        <a href="#"><img src="Bootstrap/img/9.png" alt="" class="w-60"></a>
+        <a href="#"><img src="img/9.png" alt="" class="w-60"></a>
         <figure>
           <div id="triangle"></div>
           <div id="rectangle">
@@ -312,7 +281,7 @@
       <div class="col-4">
         <h1 class="news">Все новости</h1>
       </div>
-      <div class="col-4"><img src="Bootstrap/img/11.png" alt="" class="w-100"></div>
+      <div class="col-4"><img src="img/11.png" alt="" class="w-100"></div>
       <div class="col-4"><button class="btn mybtn-2">События и программы</button></div>
     </div>
   </div>
@@ -325,7 +294,7 @@
 
     <div class="row text-center">
 
-      <div class="col-4 help--pic"><img src="Bootstrap/img/12.png" alt="">
+      <div class="col-4 help--pic"><img src="img/12.png" alt="">
         <div class="how--to--help--text">
           <span>Пожертвовать</span>
         </div>
@@ -333,7 +302,7 @@
 
 
 
-      <div class="col-4 help--pic"><img src="Bootstrap/img/13.png" alt="">
+      <div class="col-4 help--pic"><img src="img/13.png" alt="">
         <div class="how--to--help--text">
           <span>Пожертвовать</span>
         </div>
@@ -341,7 +310,7 @@
 
 
 
-      <div class="col-4 help--pic"><img src="Bootstrap/img/14.png" alt="">
+      <div class="col-4 help--pic"><img src="img/14.png" alt="">
         <div class="how--to--help--text">
           <span>Пожертвовать</span>
         </div>
@@ -363,18 +332,18 @@
   <section class="inst">
     <div class="col-sm-7 no-margin left--inst--wrap"">
     <div class=" left--inst">
-      <img src="Bootstrap/img/15.png" alt="">
-      <img src="Bootstrap/img/16.png" alt="">
-      <img src="Bootstrap/img/17.png" alt="">
-      <img src="Bootstrap/img/18.png" alt="">
-      <img src="Bootstrap/img/19.png" alt="">
-      <img src="Bootstrap/img/20.png" alt="">
+      <img src="img/15.png" alt="" class="scale">
+      <img src="img/16.png" alt="">
+      <img src="img/17.png" alt="">
+      <img src="img/18.png" alt="">
+      <img src="img/19.png" alt="">
+      <img src="img/20.png" alt="">
     </div>
     </div>
 
     <div class="col-sm-5 right--inst--wrap" style="background-color: blue;">
       <div class="right--inst">
-        <img src="Bootstrap/img/21.png" alt="" class="w-100">
+        <img src="img/21.png" alt="" class="w-100">
       </div>
     </div>
   </section>
@@ -391,8 +360,7 @@
   </section>
 
   <footer>
-    <img src="Bootstrap/img/logo1.png" width="120" height="85" alt="logo">
-
+   <!--  <img src="img/logo1.png" width="120" height="80" alt="logo"> -->
 
       <span class="copyrite">
         ©2020 Animal shelter
