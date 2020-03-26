@@ -1,0 +1,173 @@
+body{
+	/*font-family:Roboto;*/
+height: 4000px;
+font-family: Roboto ;
+}
+
+li a{
+	/*font-family: Roboto ;*/
+	font-weight: bold;
+	font-style: normal;
+	font-size: 19px;
+	}
+
+.menu{
+	color:#51748A !important;
+}
+
+.menu:hover{
+color:#644D7B !important;
+}
+
+.form-control{
+	border: 3px solid #51748A;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+.p-0{
+	padding: 0;
+}
+
+.mybtn{
+	background: #644D7B;
+	border-radius: 30px;
+	color:white;
+	font-weight: bold;
+	height: 45px;
+}
+
+.mybtn:hover{
+background:#51748A;
+color:white;
+}
+
+
+.carousel-item{
+	height: 835px;
+}
+
+.tit-1{
+	margin-top: 0;
+	color:#51748A;
+	font-size:53px;
+	font-weight: bold;
+}
+
+.text-1{
+	font-size: 22px;
+	text-align:justify;
+}
+
+.cont2{
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.img-wrap{
+	position: relative;
+}
+
+.img-wrap h1{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.for-pets{
+	background-color:#644D7B; 
+}
+
+.for-pets-content{
+	background-color:#51748A;
+}
+
+.pets{
+	font-size: 53px;
+	text-align: center;
+	color:white;
+	font-weight: bold;
+	padding-top: 130px;
+}
+
+.pe{
+	text-align: center;
+	padding-left: 70px;
+	padding-right: 70px;
+	padding-top: 25px;
+	padding-bottom: 130px;
+}
+.pets1{
+color: white;
+font-weight: bold;
+font-size: 23px;
+text-align: justify;
+padding-bottom: 20px;
+}
+
+.mybtn-1{
+	background: #644D7B;
+	border-radius: 30px;
+	color:white;
+	font-weight: bold;
+	height: 50px;
+	width: 180px;
+}
+
+.mybtn-1:hover{
+	background: white;
+	color:#644D7B;
+}
+
+.effect{
+	border-radius: 10px;
+}
+.effect:hover{
+box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+border-radius: 10px;
+}
+
+.pet{
+	margin-top: 50px;
+}
+
+.indent{
+	padding-top: 20px;
+}
+
+.mybtn-2{
+	background: #644D7B;
+	color:white;
+	border-radius: 10px;
+	width: 310px;
+	height: 63px;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.mybtn-2:hover{
+	color:white;
+	background-color: #51748A;
+}
+
+.indent-1{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.news{
+	color:#51748A;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.inst-block{
+	margin:0;
+}
+/*.carousel-caption{
+	position: absolute;
+	color:black;
+	top:50%;
+	transition: translateY(-80%);
+}*/

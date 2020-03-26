@@ -1,149 +1,132 @@
-.description {
-    padding-top: 70px;
+@mixin bottom--white
+    position        : absolute
+    background-color: #fff
+    margin-top      : -35px
+    margin-left     : 5em
+    font-weight     : 800
+    border-radius   : 10px
+    padding         : 10px
+    display: flex
+    justify-content: center
 
-    .info {
-        display        : flex;
-        justify-content: center;
-        flex-wrap      : wrap;
-    }
+.description
+    padding-top: 70px
 
-    .info--caption {
-        max-width    : 40%;
-        padding-right: 3%;
-    }
+    .info
+        display        : flex
+        justify-content: center
+        flex-wrap      : wrap
 
+    --caption &
+        max-width    : 40%
+            padding-right: 3%
 
     @media (max-width: 1000px) and (min-width: 500px) {
-        height: auto;
+        height: auto
 
-        .info--caption {
-            text-align: center;
-            max-width : 100%;
-            padding   : 5%;
-        }
+    --caption &
+                text-align: center
+            max-width : 100%
+            padding   : 5%
 
-        .info--image {
-            margin: 0 auto;
-        }
-    }
+    --image &
+                margin: 0 auto
 
-}
+.what--we--doing
+    display       : flex
+    flex-direction: column
+    text-align    : center
+    padding       : 70px 70px
+    max-width     : 1600px
+    margin        : 0 auto
 
-.what--we--doing {
-    display       : flex;
-    flex-direction: column;
-    text-align    : center;
-    padding       : 70px 70px;
-    max-width     : 1600px;
-    margin        : 0 auto;
+    .pics--isAbout
+        display  : flex
+        flex-wrap: wrap
+        margin   : 0 auto
 
-    .pics--isAbout {
-        display  : flex;
-        flex-wrap: wrap;
-        margin   : 0 auto;
+        .col
+            flex-grow: 0
 
-        .col {
-            flex-grow: 0;
-        }
-    }
+    .explanation
+        position   : absolute
+        margin-top : -135px
+        margin-left: 16em
 
-    .explanation {
-        position   : absolute;
-        margin-top : -135px;
-        margin-left: 16em;
+    t--top &
+            background : #fff
+                font-weight: 700
+            font-size  : 25px
+            padding    : 3px 15px
 
-        .explanationt--top {
-            background : #fff;
-            font-weight: 700;
-            font-size  : 25px;
-            padding    : 3px 15px;
-        }
+    --bottom &
+            background : #51748A
+            color      : white
+                padding-top: 10px
 
-        .explanation--bottom {
-            background : #51748A;
-            color      : white;
-            padding-top: 10px;
+            span
 
-            span {
+                line-height: 20px
+                font-weight: 700
+                font-size  : 18px
 
-                line-height: 20px;
-                font-weight: 700;
-                font-size  : 18px;
-
-                p {
-                    margin-bottom: 0px;
-                    font-size    : 25px;
-                }
-            }
-        }
-    }
+                p
+                    margin-bottom: 0px
+                    font-size    : 25px
 
     @media (max-width: 800px) and (min-width: 500px) {
-        .pics--isAbout {
-            .col {
-                padding-top: 40px;
-            }
-        }
-    }
-}
+        .pics--isAbout
+            .col
+                padding-top: 40px
 
+.take--pet
+    display  : flex
+    flex-wrap: wrap
 
-.take--pet {
-    display  : flex;
-    flex-wrap: wrap;
+    .left--side
+        padding-right : 0px
+        padding-bottom: 0px
 
-    .left--side {
-        padding-right : 0px;
-        padding-bottom: 0px;
+        .left--take--pet
+            display        : flex
+            flex-wrap      : wrap
+            justify-content: space-around
+            padding-top    : 3%
+            padding-bottom : 4.7%
+            background     : #644D7B
 
-        .left--take--pet {
-            display        : flex;
-            flex-wrap      : wrap;
-            justify-content: space-around;
-            padding-top    : 3%;
-            padding-bottom : 4.7%;
-            background     : #644D7B;
-        }
-    }
+    figure
+        padding-top: 40px
 
-    figure {
-        padding-top: 40px;
+        #rectangle
+            width          : 310px
+            height         : 120px
+            background     : #fff
+            margin         : 0 auto
+            display        : flex
+            justify-content: center
 
-        #rectangle {
-            width          : 310px;
-            height         : 120px;
-            background     : #fff;
-            margin         : 0 auto;
-            display        : flex;
-            justify-content: center;
+            p
+                margin-top : 30px
+                font-weight: 500
+                font-size  : 22px
+                text-align : center
+                max-width  : 65%
 
-            p {
-                margin-top : 30px;
-                font-weight: 500;
-                font-size  : 22px;
-                text-align : center;
-                max-width  : 65%;
-            }
-        }
+        #triangle
+            margin       : 0 auto
+            width        : 0
+            height       : 0
+            border-bottom: 15px solid #fff
+            border-left  : 20px solid transparent
+            border-right : 20px solid transparent
 
-        #triangle {
-            margin       : 0 auto;
-            width        : 0;
-            height       : 0;
-            border-bottom: 15px solid #fff;
-            border-left  : 20px solid transparent;
-            border-right : 20px solid transparent;
-        }
-    }
+    .right--side
+        padding-left : 0px
+        padding-right: 0px
 
-    .right--side {
-        padding-left : 0px;
-        padding-right: 0px;
-
-        .right--take--pet {
-            background: #708795;
-
-        }
+        .right--take--pet
+            background: #708795
 
         // @media (max-width: 800px) and (min-width: 500px) {
         //     .right--pet{
@@ -153,37 +136,28 @@
         //     }
         // }
 
-    }
-}
+.how--to--help
+    display        : flex
+    flex-wrap      : wrap
+    justify-content: center
+    max-width      : 1440px
 
-.how--to--help {
-    display        : flex;
-    flex-wrap      : wrap;
-    justify-content: center;
-    max-width      : 1440px;
+    .help--pic
+        margin   : 0 auto
+        max-width: 100%
 
-    .help--pic {
-        margin   : 0 auto;
-        max-width: 100%;
+        .how--to--help--text
+            position        : absolute
+            background-color: #fff
+            margin-top      : -35px
+            margin-left     : 5em
+            font-weight     : 800
+            border-radius   : 10px
+            padding         : 10px 70px
 
-        .how--to--help--text {
-            position        : absolute;
-            background-color: #fff;
-            margin-top      : -35px;
-            margin-left     : 5em;
-            font-weight     : 800;
-            border-radius   : 10px;
-            padding         : 10px 70px;
-        }
-
-    }
-}
-
-
-.news {
-    position  : relative;
-    box-sizing: content-box;
-}
+.news
+    position  : relative
+    box-sizing: content-box
 
 // * {
 //     box-sizing: border-box;
@@ -212,94 +186,177 @@
 //     padding          : 40px;
 // }
 
-.inst {
-    display   : flex;
-    flex-wrap : wrap;
-    max-width : 1440px;
-    margin    : 0 auto;
-    margin-top: 90px;
+.inst
+    display   : flex
+    flex-wrap : wrap
+    max-width : 1440px
+    margin    : 0 auto
+    margin-top: 90px
 
-    .left--inst--wrap {
-        padding     : 0px 0px;
-        margin-right: -23px;
-        margin-left : 30px;
+    .left--inst--wrap
+        padding     : 0px 0px
+        margin-right: -23px
+        margin-left : 30px
 
-        .left--inst {
+        .left--inst
 
-            img {
-                width      : 264px;
-                height     : 264px;
-                margin-left: -4px;
-            }
-        }
-    }
+            img
+                width      : 264px
+                height     : 264px
+                margin-left: -4px
 
-    .right--inst--wrap {
-        padding    : 0px 0px;
-        margin-left: -33px;
+    .right--inst--wrap
+        padding    : 0px 0px
+        margin-left: -33px
 
-        .right--inst {
-            background: blue;
-            overflow  : hidden;
-            padding   : 0px 0px;
+        .right--inst
+            background: blue
+            overflow  : hidden
+            padding   : 0px 0px
 
-            img {
-                width : 648px;
-                height: 528px;
-            }
-        }
-    }
-}
+            img
+                width : 648px
+                height: 528px
 
-.feedback {
-    height    : 204px;
-    background: #51748A;
+.feedback
+    height    : 204px
+    background: #51748A
 
-    h1 {
-        padding-top : 40px;
-        padding-left: 11rem;
-    }
+    h1
+        padding-top : 40px
+        padding-left: 11rem
 
-    .form--wrap {
-        display: flex;
+    .form--wrap
+        display: flex
 
-        input {
-            width        : 900px;
-            height       : 70px;
-            border-radius: 10px;
-            margin-left  : 13%;
-        }
+        input
+            width        : 900px
+            height       : 70px
+            border-radius: 10px
+            margin-left  : 13%
 
-        .subscribe {
-            background   : #644D7B;
-            border       : none;
-            margin-left  : -12px;
-            border-radius: 0px 10px 10px 0px;
+        .subscribe
+            background   : #644D7B
+            border       : none
+            margin-left  : -12px
+            border-radius: 0px 10px 10px 0px
 
-            span {
-                font-size    : 22px;
-                padding-left : 20px;
-                padding-right: 20px;
-                color        : #fff;
-                font-weight  : 700;
-            }
-        }
-    }
-}
+            span
+                font-size    : 22px
+                padding-left : 20px
+                padding-right: 20px
+                color        : #fff
+                font-weight  : 700
 
-footer {
-    display       : flex;
-    flex-direction: column;
-    height        : 227px;
-    background    : #644D7B;
-    text-align    : center;
+.main--info
+    height   : 594px
+    margin   : 0 auto
+    max-width: 1160px
+    display  : flex
+    flex-wrap: wrap
 
-    img {
-        margin: 0 auto;
-    }
+    .left--main--info
+        img
+            width: 346px
+            height: 462px
+            box-shadow   : 10px 10px 10px rgba(0, 0, 0, 0.25)
+            border-radius: 10px
 
-    span {
-        color      : #fff;
-        padding-top: 5%;
-    }
-}
+        .bottom--pic--description
+
+            @include bottom--white()
+            margin-top   : -44px
+            border-radius: 10px 10px 0px 0px
+            width: 250px
+
+    .right--main--info
+
+        .pet--name
+            text-align : center
+            margin     : 0 auto
+            font-family: Roboto
+            font-style : normal
+            font-weight: bold
+            font-size  : 96px
+            line-height: 112px
+            color      : #51748A
+
+        ul
+            padding-top    : 5px
+            list-style-type: none
+            margin-left    : 6em
+
+            li
+                padding-top    : 25px
+                list-style-type: none
+
+                h4
+                    font-weight: bold
+                    font-size  : 40px
+                    line-height: 47px
+
+                span
+                    font-weight: normal
+                    font-size  : 36px
+                    line-height: 42px
+
+    .pet--description
+        h4
+            font-style : normal
+            font-weight: bold
+            font-size  : 48px
+            line-height: 56px
+
+        span
+            font-style : normal
+            font-weight: normal
+            font-size  : 32px
+            line-height: 37px
+
+.other--pets
+    display       : flex
+    flex-direction: column
+    width         : 1160px
+
+    h4
+        padding-top: 40px
+        font-style : normal
+        font-weight: bold
+        font-size  : 48px
+        line-height: 56px
+
+    .pets--offer--wrap
+        display        : flex
+        justify-content: space-between
+
+        .pets--offer
+            width   : 346px
+            height  : 500px
+            overflow: hidden
+
+            span
+                font-style : normal
+                font-weight: bold
+                font-size  : 36px
+                line-height: 42px
+
+                color : #51748A
+                margin-left: 30%
+
+            img
+                height     : 462px
+                margin-left: -220px
+
+footer
+    display       : flex
+    flex-direction: column
+    height        : 227px
+    background    : #644D7B
+    text-align    : center
+
+    img
+        margin: 0 auto
+
+    span
+        color      : #fff
+        padding-top: 5%

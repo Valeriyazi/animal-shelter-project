@@ -1,0 +1,86 @@
+<?php
+if(session_status()!=PHP_SESSION_ACTIVE) session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/roboto/roboto.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Pet--name Profile</title>
+</head>
+
+<body>
+    <? php
+include 'menu.php';
+?>
+
+    <section class="main--info">
+        <div class="left--main--info">
+            <div class="help--pic"><img src="img/30.jpeg" alt="">
+                <figure class="bottom--pic--description">
+                    <span>Люблю огурцы</span>
+                </figure>
+            </div>
+        </div>
+        <div class="right--main--info">
+            <h2 class="pet--name">Бакстер</h2>
+
+            <ul>
+                <li class="criterion">
+                    <h4>Возраст</h4>
+                    <span>3 годика</span>
+                </li>
+                <li class="criterion">
+                    <h4>Пол</h4>
+                    <span>чистокровный мужчина</span>
+                </li>
+                <li class="criterion">
+                    <h4>Характер</h4>
+                    <span>Мур мур мур няняня</span>
+                </li>
+                <li class="criterion">
+                    <h4>Порода</h4>
+                    <span>Уличный похититель сердец</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pet--description">
+            <h4>Описание</h4>
+            <span class="pet--annotation">Добродушный котик, очень ласковый. Зовут Бакстер, чистоплотный. Любит есть
+                огурцы и смотреть телевизор. Шалит не сильно, иногда только обои дерет и кусает за пальцы. Имеет
+                тигриный окрас и ангельский характер. У меня уже кончилась фантазия, но кот вообще классный, берите все,
+                5 звезд. Лучше этого кота только Лера. ЛЕРА, ПРИВЕТ <3 <3 <3 ВОЗЬМИ КОТА, НУ РЕАЛЬНО КЛЕВЫЙ ЖЕ</span>
+        </div>
+
+        <div class="other--pets">
+            <h4>Посмотрите также</h4>
+            <div class="pets--offer--wrap">
+                <div class="pets--offer">
+                    <img src="img/28.jpeg" alt="" srcset="">
+                    <span class="name">Джерри</span>
+                </div>
+                <div class="pets--offer">
+                    <img src="img/28.jpeg" alt="" srcset="">
+                    <span class="name">Джерри</span>
+                </div>
+                <div class="pets--offer">
+                    <img src="img/28.jpeg" alt="" srcset="">
+                    <span class="name">Джерри</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

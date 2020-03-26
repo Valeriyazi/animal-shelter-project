@@ -1,7 +1,6 @@
 <?php
 if(session_status()!=PHP_SESSION_ACTIVE) session_start();
 ?>
-
 <!doctype html>
 <html lang="en">
 
@@ -17,20 +16,10 @@ if(session_status()!=PHP_SESSION_ACTIVE) session_start();
   <link rel="stylesheet" href="../fonts/roboto/roboto.css" />
   <link rel="stylesheet" href="../styles.css">
   <title>Animal Shelter</title>
-<style type="text/css">
-  .title{
-    background: url(/img/26.jpeg) center center no-repeat  !important;
-    background-size: cover !important;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    top:0;
-    left:0;
-  }
-
-.jumbotron{
+  <style type="text/css">
+    .myjumbotron{
   height: 100vh;
-  background: url(img/26.jpeg);
+  background: url(img/46.jpeg);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -40,13 +29,11 @@ if(session_status()!=PHP_SESSION_ACTIVE) session_start();
 }
 
 .mask{
- /* background:#51748A;*/
- background: rgb(81, 116, 138, 0.8);
- /* opacity: 0.8;*/
+  background: rgb(81, 116, 138, 0.8);
   /*width: 18%;*/
   /*margin-right: 70%;*/
  /* margin:40% 0% 0% 50%;*/
- margin-top: 30%;
+ margin-top: 35%;
  display: inline-block;
  padding: 0%;
 }
@@ -65,77 +52,39 @@ if(session_status()!=PHP_SESSION_ACTIVE) session_start();
   text-decoration: none;
 }
 
-.myblock{
-  padding-left: 17%;
-  padding-right: 17%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  text-decoration: none;
-}
-
-.myblock p{
-  margin-bottom: 20%;
-  font-family: Roboto;
-  font-style: normal;
+ .tit-1 a {
+  margin-top : 0;
+  color      : #51748A !important;
+  font-size  : 53px;
   font-weight: bold;
-  font-size: 25px;
-  color: #51748A;
-  text-decoration: none;
 }
 
-.myblock p:hover{
-  color: #644D7B;
- text-decoration: none;
+.myjum{
+  background: white !important; 
+
 }
-
-
-.image{
-  overflow:hidden;
-}
-
-.image img {
- -moz-transition: all 1s ease-out;
- -o-transition: all 1s ease-out;
- -webkit-transition: all 1s ease-out;
- }
- 
-.image img:hover{
- -webkit-transform: scale(1.1);
- -moz-transform: scale(1.1);
- -o-transform: scale(1.1);
- }
-
-
-
-</style>
-
-</script>
-
+  </style>
 </head>
-
 <body>
 <?php
 include 'menu.php';
 ?>
-<div class="jumbotron">
-<div class="mask"><h1 class="display-4">ВЫБРАТЬ ПИТОМЦА</h1></div>
+
+<div class="jumbotron myjumbotron">
+<div class="mask"><h1 class="display-4">СОБЫТИЯ И НОВОСТИ</h1></div>
 </div>
 
-<!-- <section class="container-fluid p-0">
-<div class="row text-center myblock ">
-    <div class="col-12 col-sm-6 col-md-6 col-xl ml-2 "><img src="img/1/30.png"><p>Бакстер</p></div>
-    <div class="col-12 col-sm-6 col-md-6 col-xl ml-2"><img src="img/1/40.png"><p>Бакстер</p></div>
-    <div class="col-12 col-sm-6 col-md-6 col-xl ml-2"><img src="img/1/22.png"><p>Бакстер</p></div>
-    
-    <div class="col-12 col-sm-6 col-md-6 col-xl ml-2 "><img src="img/1/30.png"><p>Бакстер</p></div>
-    <div class="col-12 col-sm-6 col-md-6 col-xl ml-2"><img src="img/1/40.png"> </div>
-    <div class="col-12 col-sm-6 col-md-6 col-xl ml-2"><img src="img/1/22.png"> </div>
-</div>
-</section> -->
-
+<!-- <div class="jumbotron container col-9">
+  <h1 class="display-4">Название</h1>
+  <p class="lead">Короткое описание gf mkmfdkm kaemvkm</p>
+  <hr class="my-4">
+  <p>20 июня 2020</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Читать дальше</a>
+  </p>
+</div> -->
 
 <?php
-
   $host = "127.0.0.1"; // адрес сервера
   $database = "register-bd"; // имя базы данных
   $user = "root"; // имя пользователя
@@ -143,34 +92,28 @@ include 'menu.php';
 
   $link = mysqli_connect($host, $user, $password1, $database) or die("Ошибка " . mysqli_error($link));
 
-  $queryLog = "SELECT photo, name, id FROM pets";
+  $queryLog = "SELECT title, short_description, date, id FROM news";
 
   $resultOfexNameSelect = mysqli_query($link, $queryLog)
   or die("Ошибка! ".mysqli_error($link));
 
   $countexNamerows = mysqli_num_rows($resultOfexNameSelect); // кол-во строк запроса
-
-
-echo "<section class='container-fluid p-0'>
-      <div class='row text-center myblock'>";
       
     for($i = 0; $i < $countexNamerows; ++$i)
     {
       $countexNamerow = mysqli_fetch_row($resultOfexNameSelect);
-
-      echo "<div class='col-12 col-sm-6 col-md-6 col-xl ml-2'>
-              <div class='image'><a href='pet_profile.php?id=$countexNamerow[2]'><img src='img/1/$countexNamerow[0]'></a></div>
-              <a href='pet_profile.php?id=$countexNamerow[2]'><p>$countexNamerow[1]</p></a>
-           </div>";
+      echo "<div class='jumbotron container col-9 myjum'>
+  <h1 class='display-4 tit-1'><a href='pet_news.php?id=$countexNamerow[3]'>$countexNamerow[0]</a></h1>
+  <p class='lead text-1'>$countexNamerow[1]</p>
+  <hr class='my-4'>
+  <p>$countexNamerow[2]</p>
+  <p class='lead'>
+    <a class='btn btn-primary btn-lg mybtn-2' href='pet_news.php?id=$countexNamerow[3]' role='button'>Читать дальше</a>
+  </p>
+</div>";
     }
-
-    echo "</div></section>";
-
-      ?>      
-
-
-
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      ?>
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"

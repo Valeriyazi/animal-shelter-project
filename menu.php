@@ -35,10 +35,10 @@ if(session_status()!=PHP_SESSION_ACTIVE) session_start();
     <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto ">
         <li class="nav-item">
-          <a href="#" class="nav-link menu">Кто мы</a>
+          <a href="news.php" class="nav-link menu fa-instagram">Новости</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link menu">Что мы делаем</a>
+          <a href="comment.php" class="nav-link menu">Что мы делаем</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link menu">Как помочь</a>
@@ -55,7 +55,7 @@ if(session_status()!=PHP_SESSION_ACTIVE) session_start();
         ?>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input type="text" class="form-control mr-sm-2" placeholder="поиск..." aria-label="Search">
+        <input type="text" class="form-control mr-sm-2 search" placeholder="поиск..." aria-label="Search">
         <!-- <button class="btn btn-outline-success my-2 my-sm-0">search</button> -->
       </form>
       <button class=" btn mybtn">Пожертвовать</button>

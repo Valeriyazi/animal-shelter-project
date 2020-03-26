@@ -60,6 +60,14 @@ if (empty($row['login'])) {
     if ($row['pass'] === md5($password)) {
         $_SESSION['login'] = $row['login'];
         $_SESSION['name'] = $row['name'];
+        $is_admin = $row['admin'];
+
+        if($is_admin == 0){
+            $_SESSION['is_admin'] = 0;
+        }
+        else {
+            $_SESSION['is_admin'] = 1;
+        }
 
         print "<script language='Javascript' type='text/javascript'>
         alert('Вы успешно авторизовались!');
